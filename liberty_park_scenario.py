@@ -190,6 +190,20 @@ def handle_choice(scene, scene_id):
         outcome = scene["outcome"]
         st.markdown(f"### {outcome_colors[outcome]} {outcome_text[outcome]}")
         
+        # Add reflection prompt
+        st.markdown("---")
+        st.subheader("📝 Reflection")
+        st.markdown("""
+        Your journey to save Liberty Park has ended. Now, reflect on the process:
+        
+        • Why do you think your chosen strategy led to this outcome?
+        
+        • Compare the effectiveness of individual actions (like your first choice) versus coordinated group actions (your second choice).
+        
+        • In a real-world situation, what is one thing you would do differently after this experience?
+        """)
+        
+        st.markdown("---")
         if st.button("Start Over", key="restart"):
             st.session_state.current_scene = "1"
             st.session_state.scene_history = []
