@@ -274,6 +274,9 @@ def main():
         layout="wide"
     )
     
+    # Initialize Google Sheets on first run
+    initialize_google_sheet()
+    
     initialize_session_state()
     
     # Main content
