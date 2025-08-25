@@ -143,7 +143,7 @@ def display_scene(scene_id):
         st.info(scene["description"])
     
     # Display narration
-    st.markdown(f"**{scene['narration']}**")
+    st.markdown(scene['narration'])
     
     return scene
 
