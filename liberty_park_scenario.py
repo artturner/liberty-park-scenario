@@ -142,7 +142,7 @@ def display_scene(scene_id):
     # Display image if available, otherwise fall back to text description
     image_path = f"images/scene_{scene_id}.png"
     if os.path.exists(image_path):
-        st.image(image_path, use_column_width=True)
+        st.image(image_path, use_container_width=True)
     elif scene["description"]:
         st.info(scene["description"])
     
