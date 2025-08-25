@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 import os
+from sheets_integration import save_reflection_to_sheets, initialize_google_sheet
 
 # Scenario data structure
 SCENARIO_DATA = {
@@ -190,18 +191,67 @@ def handle_choice(scene, scene_id):
         outcome = scene["outcome"]
         st.markdown(f"### {outcome_colors[outcome]} {outcome_text[outcome]}")
         
-        # Add reflection prompt
+        # Add reflection form
         st.markdown("---")
-        st.subheader("📝 Reflection")
-        st.markdown("""
-        Your journey to save Liberty Park has ended. Now, reflect on the process:
+        st.subheader("📝 Complete Your Reflection")
         
-        • Why do you think your chosen strategy led to this outcome?
-        
-        • Compare the effectiveness of individual actions (like your first choice) versus coordinated group actions (your second choice).
-        
-        • In a real-world situation, what is one thing you would do differently after this experience?
-        """)
+        # Check if reflection already submitted
+        reflection_key = f"reflection_submitted_{scene_id}"
+        if st.session_state.get(reflection_key, False):
+            st.success("✅ Reflection submitted successfully!")
+            st.info("Thank you for completing the Liberty Park scenario and sharing your thoughts!")
+        else:
+            # Student name input
+            student_name = st.text_input(
+                "Student Name:", 
+                key=f"student_name_{scene_id}",
+                help="Enter your name to receive completion credit"
+            )
+            
+            # Reflection questions
+            st.markdown("**Please reflect on your experience:**")
+            
+            reflection_1 = st.text_area(
+                "1. Why do you think your chosen strategy led to this outcome?",
+                key=f"reflection_1_{scene_id}",
+                height=100,
+                help="Think about the specific actions you took and their consequences"
+            )
+            
+            reflection_2 = st.text_area(
+                "2. Compare the effectiveness of individual actions (like your first choice) versus coordinated group actions (your second choice).",
+                key=f"reflection_2_{scene_id}", 
+                height=100,
+                help="Consider the impact and reach of different engagement strategies"
+            )
+            
+            reflection_3 = st.text_area(
+                "3. In a real-world situation, what is one thing you would do differently after this experience?",
+                key=f"reflection_3_{scene_id}",
+                height=100,
+                help="What did you learn that would change your approach?"
+            )
+            
+            # Submit button
+            if st.button("Submit Reflection", key=f"submit_reflection_{scene_id}", type="primary"):
+                if student_name and reflection_1 and reflection_2 and reflection_3:
+                    # Save to Google Sheets
+                    success = save_reflection_to_sheets(
+                        student_name=student_name,
+                        outcome=outcome,
+                        reflection_1=reflection_1,
+                        reflection_2=reflection_2, 
+                        reflection_3=reflection_3,
+                        choices_made=st.session_state.choices_made
+                    )
+                    
+                    if success:
+                        st.session_state[reflection_key] = True
+                        st.rerun()
+                    else:
+                        st.error("There was an error submitting your reflection. Please try again.")
+                else:
+                    st.error("Please fill in all fields before submitting.")
         
         st.markdown("---")
         if st.button("Start Over", key="restart"):
