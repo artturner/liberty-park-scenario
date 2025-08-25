@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+import os
 
 # Scenario data structure
 SCENARIO_DATA = {
@@ -138,8 +139,11 @@ def display_scene(scene_id):
     # Display title
     st.title(scene["title"])
     
-    # Display description as context
-    if scene["description"]:
+    # Display image if available, otherwise fall back to text description
+    image_path = f"images/scene_{scene_id}.png"
+    if os.path.exists(image_path):
+        st.image(image_path, use_column_width=True)
+    elif scene["description"]:
         st.info(scene["description"])
     
     # Display narration
