@@ -5,21 +5,39 @@ import json
 from datetime import datetime
 
 def get_google_sheets_client():
-    """Initialize Google Sheets client using service account credentials from Streamlit secrets."""
+    """Initialize Google Sheets client using service account credentials from file or Streamlit secrets."""
     try:
-        # Get credentials from Streamlit secrets
-        credentials_dict = {
-            "type": st.secrets["gcp_service_account"]["type"],
-            "project_id": st.secrets["gcp_service_account"]["project_id"],
-            "private_key_id": st.secrets["gcp_service_account"]["private_key_id"],
-            "private_key": st.secrets["gcp_service_account"]["private_key"],
-            "client_email": st.secrets["gcp_service_account"]["client_email"],
-            "client_id": st.secrets["gcp_service_account"]["client_id"],
-            "auth_uri": st.secrets["gcp_service_account"]["auth_uri"],
-            "token_uri": st.secrets["gcp_service_account"]["token_uri"],
-            "auth_provider_x509_cert_url": st.secrets["gcp_service_account"]["auth_provider_x509_cert_url"],
-            "client_x509_cert_url": st.secrets["gcp_service_account"]["client_x509_cert_url"]
-        }
+        import os
+        
+        # Try to read from secret file (Render) first, then fallback to Streamlit secrets
+        credentials_dict = None
+        
+        # Check for Render secret file locations
+        secret_file_paths = [
+            "/etc/secrets/google_credentials.json",  # Render secret file location
+            "google_credentials.json",               # Local/root directory
+        ]
+        
+        for file_path in secret_file_paths:
+            if os.path.exists(file_path):
+                with open(file_path, 'r') as f:
+                    credentials_dict = json.load(f)
+                break
+        
+        # Fallback to Streamlit secrets if no file found
+        if not credentials_dict:
+            credentials_dict = {
+                "type": st.secrets["gcp_service_account"]["type"],
+                "project_id": st.secrets["gcp_service_account"]["project_id"],
+                "private_key_id": st.secrets["gcp_service_account"]["private_key_id"],
+                "private_key": st.secrets["gcp_service_account"]["private_key"],
+                "client_email": st.secrets["gcp_service_account"]["client_email"],
+                "client_id": st.secrets["gcp_service_account"]["client_id"],
+                "auth_uri": st.secrets["gcp_service_account"]["auth_uri"],
+                "token_uri": st.secrets["gcp_service_account"]["token_uri"],
+                "auth_provider_x509_cert_url": st.secrets["gcp_service_account"]["auth_provider_x509_cert_url"],
+                "client_x509_cert_url": st.secrets["gcp_service_account"]["client_x509_cert_url"]
+            }
         
         credentials = Credentials.from_service_account_info(
             credentials_dict,
@@ -42,9 +60,10 @@ def save_reflection_to_sheets(student_name, outcome, reflection_1, reflection_2,
             return False
         
         # Open the spreadsheet (you'll need to create this and share it with the service account)
-        sheet_url = st.secrets.get("google_sheet_url", "")
+        import os
+        sheet_url = os.getenv("GOOGLE_SHEET_URL") or st.secrets.get("google_sheet_url", "")
         if not sheet_url:
-            st.error("Google Sheet URL not configured in secrets.")
+            st.error("Google Sheet URL not configured in environment or secrets.")
             return False
             
         spreadsheet = client.open_by_url(sheet_url)
@@ -80,7 +99,8 @@ def initialize_google_sheet():
         if not client:
             return False
         
-        sheet_url = st.secrets.get("google_sheet_url", "")
+        import os
+        sheet_url = os.getenv("GOOGLE_SHEET_URL") or st.secrets.get("google_sheet_url", "")
         if not sheet_url:
             return False
             
