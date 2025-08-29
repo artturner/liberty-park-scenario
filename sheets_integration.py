@@ -72,7 +72,7 @@ def get_or_create_sheet():
         st.error(f"Error accessing Google Sheets: {str(e)}")
         return None
 
-def save_reflection_to_sheets(student_name, outcome, scenario_title=None, choices_made=None, **reflections):
+def save_reflection_to_sheets(student_name, outcome, scenario=None, choices_made=None, **reflections):
     """Save reflection data to Google Sheets with flexible reflection fields"""
     try:
         sheet = get_or_create_sheet()
@@ -87,7 +87,7 @@ def save_reflection_to_sheets(student_name, outcome, scenario_title=None, choice
         row_data = [
             timestamp,
             student_name,
-            scenario_title or "Unknown Scenario",
+            scenario or "Unknown Scenario",
             outcome,
             choices_summary
         ]
