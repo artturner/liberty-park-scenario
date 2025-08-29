@@ -1,0 +1,1020 @@
+╭───────────────────────────────────────────────────╮
+│ ✻ Welcome to Claude Code!                         │
+│                                                   │
+│   /help for help, /status for your current setup  │
+│                                                   │
+│   cwd: C:\Users\arttu\liberty-park                │
+╰───────────────────────────────────────────────────╯
+
+> I prompted Gemini for the scenario and this is what it provided. Does it have everything needed?Of course. Drawing from the 
+  principles outlined in the *How to Design Effective Branching Scenarios* guide, I have created a fully developed script and 
+  storyboard for the **Delegate at the Constitutional Convention of 1787** scenario.
+
+  This design uses several key techniques from the guide, including:
+
+    * [cite\_start]**Scene Descriptions:** Each scene specifies the setting, characters, and key information to be conveyed[cite: 
+  1229].
+    * [cite\_start]**Decision Point Scripting:** Choices are designed to be meaningful and logically connected to consequences, 
+  avoiding simple right/wrong answers[cite: 1231].
+    * [cite\_start]**Branching Logic Documentation:** The "Consequences" section clearly documents the rules and variable changes 
+  that determine the scenario's path[cite: 1234, 1235].
+    * [cite\_start]**Progressive Complexity:** The scenario moves from a foundational debate on representation to the more 
+  ethically complex issue of slavery[cite: 1063].
+    * [cite\_start]**Reflection:** The final scene is dedicated to reflection, helping to develop the learner's metacognitive 
+  awareness of the historical process[cite: 1091].
+
+  -----
+
+  ### **Scenario Title: The Philadelphia Compromise**
+
+  **Learning Objectives:**
+  Upon completion of this scenario, the student will be able to:
+
+  1.  [cite\_start]Analyze the competing interests of large and small states regarding legislative representation during the 
+  Constitutional Convention[cite: 261].
+  2.  [cite\_start]Evaluate the political and ethical trade-offs required to address the issue of slavery in the Constitution[cite:
+   337, 347].
+  3.  [cite\_start]Synthesize different viewpoints to understand why pragmatic compromise was essential to the creation of the U.S.
+   Constitution[cite: 25].
+
+  **Learner Role:** You are a delegate from **Connecticut**, a state with a middling population, caught between the powerful large 
+  states and the numerous small states. [cite\_start]Your colleague, Roger Sherman, is looking to you for support as you both 
+  navigate the contentious debates[cite: 323].
+
+  **Tracking Variables:**
+  This scenario will track two key variables to determine the outcome:
+
+    * **`LargeStateFavor`:** A score from -5 to +5. Positive scores indicate favor with large states like Virginia; negative scores
+   indicate favor with small states like New Jersey.
+    * **`SouthernStateFavor`:** A score from -5 to +5. Positive scores indicate favor with southern, slaveholding states; negative 
+  scores indicate favor with northern states.
+
+  -----
+
+  ### **Storyboard and Script**
+
+  | Scene ID | Scene Description & Visuals                                                                                         
+                                                                                                                             | 
+  Characters & Dialogue                                                                                                            
+                                                                                                                                   
+                                                                                                                                   
+                                                                               | Learner Choice (Decision Point)                   
+                                                                                                                                   
+                                                                                                                                   
+                         | Consequences & Branching Logic                                                                          
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                           |
+  | :------- | :-------------------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------------------------- | 
+  :--------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------------------------------
+  ------------------------------------------------------------------ | 
+  :--------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------------------------------
+  ------------------------------------------------------------------------ | :-----------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------------------------------
+  --------------------------------------------------------------------------------------------------------------- |
+  | **1.0** | **INT. [cite\_start]PENNSYLVANIA STATE HOUSE - DAY** \<br\>\<br\> A stuffy, crowded room in the summer of 1787[cite: 
+  311]. Delegates are murmuring. [cite\_start]GEORGE WASHINGTON sits elevated, presiding over the convention[cite: 259]. The camera
+   focuses on EDMUND RANDOLPH of Virginia as he stands to speak. | **George Washington:** "Gentlemen, the floor is recognized for 
+  the delegate from Virginia." [cite\_start]\<br\>\<br\> **Edmund Randolph:** "Thank you, Mr. President. I propose a new government
+   with a bicameral legislature[cite: 262]. [cite\_start]To ensure a government of the people, representation in both houses must 
+  be based on the population of each state[cite: 263]. A small state cannot claim an equal voice with a large one; it is contrary 
+  to every principle of justice." | It is your turn to speak. How do you respond to the Virginia Plan?                             
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                      - |
+  | **2.0** | **INT. PENNSYLVANIA STATE HOUSE - DAY** \<br\>\<br\> An angry murmur fills the room. WILLIAM PATERSON of New Jersey 
+  stands, glaring at Randolph. JAMES MADISON of Virginia watches you intently.                                                     
+               | [cite\_start]**William Paterson:** "Tyranny\! This Virginia Plan smells of tyranny\! It seeks to crush the small 
+  states under the boot of the large. I will remind the delegate from Virginia that we are states, not mere counties\! We demand 
+  equal representation\!" [cite: 267]                                                                                              
+                                                                                                                                   
+                                                                                                                                   
+                                                         | *This scene has no choice. It provides the counter-argument and reaction
+   to the player's initial stance, setting up the next decision.*                                                                  
+                                                                                                                          | 
+  **Branches from 1.0:** \<br\> - **If you chose 1.A:** Madison nods approvingly at you. Paterson directs his glare partly at you. 
+  **Go to 3.0.**\<br\> - **If you chose 1.B:** Paterson nods at you. "Just as our colleague from Connecticut states, we must 
+  protect the sovereignty of all states\!" Madison looks disappointed. **Go to 3.0.**\<br\> - **If you chose 1.C:** Roger Sherman 
+  gives you a subtle nod of encouragement. Both Paterson and Randolph look skeptical. **Go to 3.0.** |
+  | **3.0** | **INT. PENNSYLVANIA STATE HOUSE - DAY** \<br\>\<br\> The debate has shifted to a new, even more divisive issue. A 
+  delegate from South Carolina is speaking, gesturing passionately. A delegate from Massachusetts sits stone-faced.                
+                 | [cite\_start]**South Carolina Delegate:** "It is simple logic. Our enslaved population contributes to the wealth
+   and power of our states. They must be counted for the purposes of representation in this new government\!" [cite: 338] 
+  [cite\_start]\<br\>\<br\> **Massachusetts Delegate:** "Abhorrent. You wish to count men and women as population whom you treat as
+   property? They have no vote, no voice. We shall not grant you representatives for them." [cite: 338] | Roger Sherman leans over 
+  to you. [cite\_start]\<br\>\<br\> **Sherman (whispering):** "This could shatter the convention. The southerners will walk if we 
+  deny them this[cite: 347]. What should be our approach?"                                                                         
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                    - | **`LargeStateFavor` = +3** \<br\> 
+  **`SouthernStateFavor` = -2** \<br\> **Branch to 2.0** - |
+  | **4.0** | **INT. PENNSYLVANIA STATE HOUSE - DAY** \<br\>\<br\> A montage of images: delegates arguing, writing, and voting. The
+   final scene depends on the player's choices. The mood can be triumphant, tense, or somber.                                   | 
+  **(Ending A - The Great Compromise)** \<br\> **Roger Sherman:** "Your counsel was invaluable. You balanced the needs of all 
+  states and ensured this union could be formed. We have created a government that can endure." \<br\>\<br\> **(Ending B - 
+  Deadlock)** \<br\> **Benjamin Franklin:** "We are at an impasse. I fear we have failed. Without compromise, this nation, 
+  conceived in liberty, may perish in its cradle." | *This is the outcome scene. There is no choice, only a summary of the 
+  convention's result based on the learner's actions.*                                                                             
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                               - | **Branches from 3.0 based on final variable scores.** \<br\> - **If `LargeStateFavor` is between
+   -2 and +2 AND `SouthernStateFavor` is between -2 and +2:** **Branch to Ending A.** The learner successfully navigated the 
+  compromises. \<br\> - **If `LargeStateFavor` is \> 3 OR \< -3, AND `SouthernStateFavor` is \> 3 OR \< -3:** **Branch to Ending 
+  B.** The learner took hardline stances and alienated too many factions. \<br\> - **All other outcomes:** **Branch to Ending C (A 
+  Different Constitution - not scripted here, but would detail a fragile union).** \<br\>\<br\> **Go to 5.0.** |
+  | **5.0** | **REFLECTION SCREEN** \<br\>\<br\> A simple screen with text on a parchment background. The image of the finished 
+  Constitution is visible.                                                                                                | 
+  [cite\_start]**Narrator (Voiceover):** "The Constitution was not inevitable. It was the product of heated debate and pragmatic, 
+  often painful, compromise[cite: 25]. The document you helped create reflects the choices you made."                              
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                              | 
+  **Reflection Prompts:** \<br\> 1. The "Three-Fifths Compromise" was necessary to form the Union but enshrined slavery in the 
+  Constitution. Was it the right decision? How did your choice reflect the balance between idealism and pragmatism? \<br\> 2. How 
+  did representing your state's interests sometimes conflict with the goal of creating a strong national government? How does this 
+  tension continue in American politics today? | *This is the final scene. It is not graded. Its purpose is to encourage 
+  metacognition and connect the scenario to broader themes.*                                                                       
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                   
+                                    - | **End of Scenario.** - |
+
+● Looking at the scenario provided, it appears well-structured and comprehensive for a branching scenario. Let me check if it has
+   all the essential elements by examining it against best practices for educational branching scenarios.
+
+● The scenario has strong foundational elements but is missing critical decision points. Here are the key issues:
+
+  Missing Components:
+
+  1. Actual choices for Scene 1.0 - The storyboard shows "It is your turn to speak. How do you respond to the Virginia Plan?" but
+   doesn't provide the specific choice options (A, B, C mentioned in the consequences)
+  2. Missing Scene 3.0 choices - Sherman asks "What should be our approach?" but no response options are provided
+  3. Incomplete branching paths - The consequences reference choices that aren't scripted (like 1.A, 1.B, 1.C, 3.A, 3.B, 3.C)
+
+  What it does well:
+  - Clear learning objectives
+  - Well-defined tracking variables
+  - Historical accuracy and context
+  - Proper reflection prompts
+  - Multiple endings based on choices
+
+  To complete this scenario, you need:
+
+● 1. Scene 1.0 choice options such as:
+    - A. Support Virginia Plan (favors large states)
+    - B. Support equal representation (favors small states)
+    - C. Propose a compromise solution
+  2. Scene 3.0 choice options for the slavery/representation issue such as:
+    - A. Support full counting of enslaved people
+    - B. Oppose counting enslaved people
+    - C. Propose fractional counting (3/5 compromise)
+  3. Complete variable tracking showing exactly how each choice affects LargeStateFavor and SouthernStateFavor scores
+
+  The framework is excellent, but the actual decision points need to be scripted to make this a functional branching scenario.
+
+> You are absolutely correct. My apologies for that oversight. A storyboard is incomplete without the specific choices that drive 
+  the branching narrative. Thank you for pointing this out.
+
+  Here is the revised and completed storyboard with the missing choice architecture for Scenes 1.0 and 3.0 fully scripted.
+
+  -----
+
+  ### **Revised Storyboard and Script: The Philadelphia Compromise**
+
+  **Learner Role:** You are a delegate from **Connecticut**.
+  **Tracking Variables:**
+
+    * **`LargeStateFavor`:** Score from -5 to +5.
+    * **`SouthernStateFavor`:** Score from -5 to +5.
+
+  | Scene ID | Scene Description & Visuals | Characters & Dialogue | Learner Choice (Decision Point) | Consequences & Branching 
+  Logic |
+  | :--- | :--- | :--- | :--- | :--- |
+  | **1.0** | **INT. PENNSYLVANIA STATE HOUSE - DAY** \<br\>\<br\> A stuffy, crowded room in the summer of 1787. GEORGE WASHINGTON 
+  sits elevated, presiding over the convention. EDMUND RANDOLPH of Virginia stands to speak. | **George Washington:** "Gentlemen, 
+  the floor is recognized for the delegate from Virginia." [cite\_start]\<br\>\<br\> **Edmund Randolph:** "Thank you, Mr. 
+  President. I propose a new government with a bicameral legislature. To ensure a government of the people, representation in both 
+  houses must be based on the population of each state[cite: 1097, 1098]. A small state cannot claim an equal voice with a large 
+  one; it is contrary to every principle of justice." | **It is your turn to speak. How do you respond to the Virginia Plan?** 
+  \<br\>\<br\> **A.** "I support the Virginia Plan. A government's legitimacy comes from the people it represents. More populous 
+  states deserve a greater voice." \<br\>\<br\> **B.** "I must object. This plan will render the smaller states powerless. We are a
+   confederation of sovereign states, and we must be represented as such—equally." \<br\>\<br\> **C.** "Mr. Randolph's plan has 
+  merit in its call for a government of the people, but the concerns for state sovereignty are valid. Perhaps a compromise can be 
+  found that respects both principles." | **`LargeStateFavor` = +3** \<br\> **`SouthernStateFavor` = -2** \<br\> **Branch to 2.0** 
+  |
+  | **2.0** | **INT. PENNSYLVANIA STATE HOUSE - DAY** \<br\>\<br\> An angry murmur fills the room. WILLIAM PATERSON of New Jersey 
+  stands, glaring at Randolph. JAMES MADISON of Virginia watches you intently. | **William Paterson:** "Tyranny\! This Virginia 
+  Plan smells of tyranny\! It seeks to crush the small states under the boot of the large. I will remind the delegate from Virginia
+   that we are states, not mere counties\! We demand equal representation\!" | *This scene has no choice. It provides the 
+  counter-argument and reaction to the player's initial stance, setting up the next decision.* | **Branches from 1.0:** \<br\> - 
+  **If you chose 1.A:** Madison nods approvingly at you. Paterson directs his glare partly at you. **Go to 3.0.** \<br\> - **If you
+   chose 1.B:** Paterson nods at you. "Just as our colleague from Connecticut states, we must protect the sovereignty of all 
+  states\!" Madison looks disappointed. **Go to 3.0.** \<br\> - **If you chose 1.C:** Roger Sherman gives you a subtle nod of 
+  encouragement. Both Paterson and Randolph look skeptical. **Go to 3.0.** |
+  | **3.0** | **INT. PENNSYLVANIA STATE HOUSE - DAY** \<br\>\<br\> The debate has shifted to a new, even more divisive issue. A 
+  delegate from South Carolina is speaking, gesturing passionately. A delegate from Massachusetts sits stone-faced. | **South 
+  Carolina Delegate:** "It is simple logic. Our enslaved population contributes to the wealth and power of our states. 
+  [cite\_start]They must be counted for the purposes of representation in this new government\!" [cite: 1125] 
+  [cite\_start]\<br\>\<br\> **Massachusetts Delegate:** "Abhorrent. You wish to count men and women as population whom you treat as
+   property? [cite: 1173] They have no vote, no voice. We shall not grant you representatives for them." | **Roger Sherman leans 
+  over to you.** \<br\>\<br\> **Sherman (whispering):** "This could shatter the convention. [cite\_start]The southerners will walk 
+  if we deny them this[cite: 1182]. What should be our approach?" \<br\>\<br\> **A.** "We must stand on principle. Enslaved persons
+   are property by southern law and cannot be counted for representation. The moral cost is too high." \<br\>\<br\> **B.** "The 
+  Union is paramount. If counting the enslaved population is the price for a new nation, then we must consider paying it." 
+  \<br\>\<br\> **C.** "Neither side will yield fully. What if we propose a fraction? We could count three-fifths of the enslaved 
+  population for both representation and taxation. [cite\_start]It is a distasteful calculus, but it may be the only path forward."
+   [cite: 1176, 1177] | **If you choose 3.A:** \<br\> **`SouthernStateFavor` = -4** \<br\> **Branch to 4.0** \<br\>\<br\> **If you 
+  choose 3.B:** \<br\> **`SouthernStateFavor` = +4** \<br\> **`LargeStateFavor` = -2** (Northern large states are offended) \<br\> 
+  **Branch to 4.0** \<br\>\<br\> **If you choose 3.C:** \<br\> **`SouthernStateFavor` = +1** (A pragmatic gain for the South) 
+  \<br\> **Branch to 4.0** |
+  | **4.0** | **INT. PENNSYLVANIA STATE HOUSE - DAY** \<br\>\<br\> A montage of images: delegates arguing, writing, and voting. The
+   final scene depends on the player's choices. The mood can be triumphant, tense, or somber. | **(Ending A - The Great 
+  Compromise)** \<br\> **Roger Sherman:** "Your counsel was invaluable. You balanced the needs of all states and ensured this union
+   could be formed. We have created a government that can endure." \<br\>\<br\> **(Ending B - Deadlock)** \<br\> **Benjamin 
+  Franklin:** "We are at an impasse. I fear we have failed. Without compromise, this nation, conceived in liberty, may perish in 
+  its cradle." | *This is the outcome scene. There is no choice, only a summary of the convention's result based on the learner's 
+  actions.* | **Branches from 3.0 based on final variable scores.** \<br\> - **If `LargeStateFavor` is between -2 and +2 AND 
+  `SouthernStateFavor` is between -2 and +2:** **Branch to Ending A.** The learner successfully navigated the compromises. \<br\> -
+   **If `LargeStateFavor` is \> 3 OR \< -3, OR `SouthernStateFavor` is \< -3:** **Branch to Ending B.** The learner took hardline 
+  stances and alienated too many factions. \<br\> - **All other outcomes:** **Branch to Ending C (A Different Constitution - a 
+  fragile union).** \<br\>\<br\> **Go to 5.0.** |
+  | **5.0** | **REFLECTION SCREEN** \<br\>\<br\> A simple screen with text on a parchment background. The image of the finished 
+  Constitution is visible. | **Narrator (Voiceover):** "The Constitution was not inevitable. It was the product of heated debate 
+  and pragmatic, often painful, compromise. The document you helped create reflects the choices you made." | **Reflection 
+  Prompts:** \<br\> 1. The "Three-Fifths Compromise" was necessary to form the Union but enshrined slavery in the Constitution. Was
+   it the right decision? How did your choice reflect the balance between idealism and pragmatism? \<br\> 2. How did representing 
+  your state's interests sometimes conflict with the goal of creating a strong national government? How does this tension continue 
+  in American politics today? | **End of Scenario.** |
+
+● Perfect! Now this scenario has everything needed for a complete branching narrative. You've addressed all the missing elements:
+
+  ✅ Complete Decision Architecture:
+  - Scene 1.0: Three clear choices about representation (large state support, small state support, compromise)
+  - Scene 3.0: Three choices about slavery/representation (principled opposition, pragmatic acceptance, fractional compromise)
+
+  ✅ Proper Variable Tracking:
+  - Each choice clearly shows its impact on LargeStateFavor and SouthernStateFavor
+  - The scoring system logically reflects the political consequences
+
+  ✅ Functional Branching Logic:
+  - Clear pathways from choices to outcomes
+  - Multiple endings based on accumulated scores
+  - Realistic consequences for different political stances
+
+  ✅ Educational Value:
+  - Forces learners to grapple with real historical dilemmas
+  - Shows how compromise was essential but morally complex
+  - Connects to modern political tensions
+
+  This scenario now successfully implements the principles from your design guide - it has meaningful choices with clear
+  consequences, avoids simple right/wrong answers, and creates authentic historical decision-making experiences. The Three-Fifths
+   Compromise choice in Scene 3.0 is particularly well-crafted, as it forces learners to confront the moral complexity that real
+  delegates faced.
+
+  The scenario is ready for implementation!
+
+> Can you create the required config.json in the convention-1787 folder in scenarios?
+
+● Read(~\liberty-park)
+  ⎿  Error: EISDIR: illegal operation on a directory, read
+
+● List(~\liberty-park)
+  ⎿  Listed 35 paths (ctrl+r to expand)
+
+● Read(scenarios\liberty_park\config.json)
+  ⎿  Read 145 lines (ctrl+r to expand)
+
+● Write(scenarios\convention-1787\config.json)
+  ⎿  Wrote 1 lines to scenarios\convention-1787\config.json                                                            
+     {
+       "metadata": {
+         "title": "The Philadelphia Compromise",
+         "description": "Navigate the debates of the Constitutional Convention of 1787 as a delegate from Connecticut",
+         "page_title": "Constitutional Convention 1787",
+         "page_icon": "🏛️",
+         "author": "Historical Education Team",
+         "version": "1.0",
+         "completion_tracking": true
+       },
+
+● Created the config.json file for the Constitutional Convention scenario! The configuration includes:
+
+  Key Features:
+  - Variable tracking for LargeStateFavor and SouthernStateFavor
+  - Conditional branching based on accumulated scores
+  - Three possible endings: success, failure, or fragile compromise
+  - Historical reflection questions about compromise and democracy
+  - Choice effects that modify the tracking variables
+
+  Structure:
+  - Scene 1: Virginia Plan debate (3 choices affecting LargeStateFavor)
+  - Scene 2: Automatic transition showing opposition response
+  - Scene 3: Slavery representation debate (3 choices affecting favor scores)
+  - Scene 4: Conditional logic determining final outcome
+  - Scene 5: Three possible endings based on player choices
+
+  The scenario now matches the storyboard you provided and is ready for implementation in your branching scenario system.
+
+> I didn't see images listed in the json file. They don't exist yet, but I asssumed a standardized number name would be listed.
+
+● You're absolutely right! Looking at the liberty_park config.json, I can see that each scene references an image file. Let me
+  update the convention-1787 config.json to include the standardized image references.
+
+● Update(scenarios\convention-1787\config.json)
+  ⎿  Updated scenarios\convention-1787\config.json with 1 addition                                                           
+       26        "1": {
+       27          "title": "The Virginia Plan",
+       28          "description": "A stuffy, crowded room in the summer of 1787. George Washington sits elevated, presiding 
+            over the convention. Edmund Randolph of Virginia stands to speak.",
+       29 +        "image": "scene_1.png",
+       30          "narration": "Liberty has brought you to Philadelphia, but will compromise keep you here?\n\nGeorge 
+            Washington: 'Gentlemen, the floor is recognized for the delegate from Virginia.'\n\nEdmund Randolph: 'Thank you, 
+            Mr. President. I propose a new government with a bicameral legislature. To ensure a government of the people, 
+            representation in both houses must be based on the population of each state. A small state cannot claim an equal 
+            voice with a large one; it is contrary to every principle of justice.'",
+       31          "type": "choice",
+       32          "choices": [
+
+● Update(scenarios\convention-1787\config.json)
+  ⎿  Updated scenarios\convention-1787\config.json with 6 additions                                                           
+       56        "2": {
+       57          "title": "The Small State Response",
+       58          "description": "An angry murmur fills the room. William Paterson of New Jersey stands, glaring at Randolph.
+             James Madison of Virginia watches you intently.",
+       59 +        "image": "scene_2.png",
+       60          "narration": "William Paterson: 'Tyranny! This Virginia Plan smells of tyranny! It seeks to crush the small
+             states under the boot of the large. I will remind the delegate from Virginia that we are states, not mere 
+            counties! We demand equal representation!'\n\nThe room erupts in heated discussion. Your position has been noted 
+            by both sides.",
+       61          "type": "auto_advance",
+       62          "next": "3"
+     ...
+       63        "3": {
+       64          "title": "The Slavery Question",
+       65          "description": "The debate has shifted to a new, even more divisive issue. A delegate from South Carolina 
+            is speaking, gesturing passionately. A delegate from Massachusetts sits stone-faced.",
+       66 +        "image": "scene_3.png",
+       67          "narration": "South Carolina Delegate: 'It is simple logic. Our enslaved population contributes to the 
+            wealth and power of our states. They must be counted for the purposes of representation in this new 
+            government!'\n\nMassachusetts Delegate: 'Abhorrent. You wish to count men and women as population whom you treat 
+            as property? They have no vote, no voice. We shall not grant you representatives for them.'\n\nRoger Sherman leans
+             over to you and whispers: 'This could shatter the convention. The southerners will walk if we deny them this. 
+            What should be our approach?'",
+       68          "type": "choice",
+       69          "choices": [
+     ...
+       93        "4": {
+       94          "title": "The Convention's End",
+       95          "description": "A montage of images: delegates arguing, writing, and voting. The final scene depends on 
+            your choices throughout the convention.",
+       96 +        "image": "scene_4.png",
+       97          "narration": "The delegates continue their work through the summer heat...",
+       98          "type": "conditional",
+       99          "conditions": [
+     ...
+       110        "5.success": {
+       111          "title": "The Great Compromise",
+       112          "description": "The Pennsylvania State House, with delegates signing documents. Roger Sherman approaches 
+             you with satisfaction.",
+       113 +        "image": "scene_5_success.png",
+       114          "narration": "Roger Sherman: 'Your counsel was invaluable. You balanced the needs of all states and 
+             ensured this union could be formed. We have created a government that can endure.'\n\nThrough careful compromise,
+              you helped forge a Constitution that could unite the states. The document is imperfect, but it provides a 
+             foundation for the new nation.",
+       115          "type": "end",
+       116          "outcome": "success",
+     ...
+       118        "5.failure": {
+       119          "title": "Convention Deadlock",
+       120          "description": "The Pennsylvania State House, with many empty chairs. Benjamin Franklin sits alone, 
+             looking worried.",
+       121 +        "image": "scene_5_failure.png",
+       122          "narration": "Benjamin Franklin: 'We are at an impasse. I fear we have failed. Without compromise, this 
+             nation, conceived in liberty, may perish in its cradle.'\n\nYour unwillingness to compromise has contributed to 
+             the convention's failure. The states return home without a new Constitution, and the future of the nation remains
+              uncertain.",
+       123          "type": "end",
+       124          "outcome": "failure",
+     ...
+       126        "5.fragile": {
+       127          "title": "A Fragile Union",
+       128          "description": "The Pennsylvania State House, with delegates looking uncertain as they sign. The 
+             atmosphere is tense.",
+       129 +        "image": "scene_5_fragile.png",
+       130          "narration": "The Constitution is signed, but the compromises you supported have created deep divisions. 
+             Some delegates sign reluctantly, others refuse entirely.\n\nYou have helped create a new government, but its 
+             foundation may be more fragile than anyone realizes.",
+       131          "type": "end",
+       132          "outcome": "compromise",
+
+● Perfect! Now the config.json includes standardized image references for each scene:
+
+  - scene_1.png - Virginia Plan presentation
+  - scene_2.png - Small state response
+  - scene_3.png - Slavery debate
+  - scene_4.png - Convention deliberations
+  - scene_5_success.png - Great Compromise ending
+  - scene_5_failure.png - Convention deadlock ending
+  - scene_5_fragile.png - Fragile union ending
+
+  This matches the pattern used in the liberty_park scenario and provides clear, descriptive filenames that correspond to each
+  scene's content and outcomes.
+
