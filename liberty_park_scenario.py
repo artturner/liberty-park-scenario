@@ -103,9 +103,11 @@ def handle_choice(scene, scene_id, scenario_data, scenario_key):
                     next_scene = condition_obj['next']
                     break
         
-        st.session_state.scene_history.append(st.session_state.current_scene)
-        st.session_state.current_scene = next_scene
-        st.rerun()
+        st.markdown("---")
+        if st.button("Continue to Outcome", key=f"conditional_{scene_id}"):
+            st.session_state.scene_history.append(st.session_state.current_scene)
+            st.session_state.current_scene = next_scene
+            st.rerun()
     
     elif scene["type"] == "auto_advance":
         st.markdown("---")

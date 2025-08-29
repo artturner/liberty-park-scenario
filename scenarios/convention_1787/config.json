@@ -97,14 +97,21 @@
       "description": "A montage of images: delegates arguing, writing, and voting. The final scene depends on your choices throughout the convention.",
       "image": "scene_4.png",
       "narration": "The delegates continue their work through the summer heat...",
+      "type": "auto_advance",
+      "next": "4.conditional"
+    },
+    "4.conditional": {
+      "title": "The Convention's Fate",
+      "description": "The summer heat is oppressive, but the delegates press on. The fate of the new nation hangs in the balance.",
+      "narration": "As the summer of 1787 draws to a close, your diplomatic choices throughout the convention have shaped the relationships between the states. The success or failure of this grand experiment in democracy now depends on the compromises you have made.",
       "type": "conditional",
       "conditions": [
         {
-          "condition": "LargeStateFavor >= -2 && LargeStateFavor <= 2 && SouthernStateFavor >= -2 && SouthernStateFavor <= 2",
+          "condition": "LargeStateFavor >= -2 and LargeStateFavor <= 2 and SouthernStateFavor >= -2 and SouthernStateFavor <= 2",
           "next": "5.success"
         },
         {
-          "condition": "LargeStateFavor > 3 || LargeStateFavor < -3 || SouthernStateFavor < -3",
+          "condition": "LargeStateFavor > 3 or LargeStateFavor < -3 or SouthernStateFavor < -3",
           "next": "5.failure"
         }
       ],
