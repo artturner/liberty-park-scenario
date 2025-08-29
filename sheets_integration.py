@@ -52,40 +52,56 @@ def get_google_sheets_client():
         st.error(f"Error connecting to Google Sheets: {str(e)}")
         return None
 
-def save_reflection_to_sheets(student_name, outcome, reflection_1, reflection_2, reflection_3, choices_made):
-    """Save reflection data to Google Sheets."""
+def get_or_create_sheet():
+    """Get or create worksheet, shared helper function"""
     try:
         client = get_google_sheets_client()
         if not client:
-            return False
+            return None
         
-        # Open the spreadsheet (you'll need to create this and share it with the service account)
         import os
         sheet_url = os.getenv("GOOGLE_SHEET_URL") or st.secrets.get("google_sheet_url", "")
         if not sheet_url:
             st.error("Google Sheet URL not configured in environment or secrets.")
-            return False
+            return None
             
         spreadsheet = client.open_by_url(sheet_url)
-        worksheet = spreadsheet.sheet1  # Use the first sheet
+        return spreadsheet.sheet1
         
-        # Prepare the data row
+    except Exception as e:
+        st.error(f"Error accessing Google Sheets: {str(e)}")
+        return None
+
+def save_reflection_to_sheets(student_name, outcome, scenario_title=None, choices_made=None, **reflections):
+    """Save reflection data to Google Sheets with flexible reflection fields"""
+    try:
+        sheet = get_or_create_sheet()
+        if not sheet:
+            return False
+        
+        # Prepare the row data
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        choices_summary = " → ".join([choice["choice"] for choice in choices_made])
+        choices_summary = " → ".join([choice["choice"] for choice in choices_made]) if choices_made else "No choices recorded"
         
+        # Start with basic fields
         row_data = [
             timestamp,
             student_name,
+            scenario_title or "Unknown Scenario",
             outcome,
-            reflection_1,
-            reflection_2,
-            reflection_3,
-            choices_summary,
-            "Completed"
+            choices_summary
         ]
         
-        # Add the row to the sheet
-        worksheet.append_row(row_data)
+        # Add reflection responses in order
+        reflection_keys = sorted([k for k in reflections.keys() if k.startswith('reflection_')])
+        for key in reflection_keys:
+            row_data.append(reflections[key])
+        
+        # Add completion status
+        row_data.append("Completed")
+        
+        # Append the row
+        sheet.append_row(row_data)
         return True
         
     except Exception as e:
@@ -95,31 +111,24 @@ def save_reflection_to_sheets(student_name, outcome, reflection_1, reflection_2,
 def initialize_google_sheet():
     """Initialize the Google Sheet with headers if it's empty."""
     try:
-        client = get_google_sheets_client()
-        if not client:
+        sheet = get_or_create_sheet()
+        if not sheet:
             return False
-        
-        import os
-        sheet_url = os.getenv("GOOGLE_SHEET_URL") or st.secrets.get("google_sheet_url", "")
-        if not sheet_url:
-            return False
-            
-        spreadsheet = client.open_by_url(sheet_url)
-        worksheet = spreadsheet.sheet1
         
         # Check if headers exist
-        if not worksheet.get_all_values():
+        if not sheet.get_all_values():
             headers = [
                 "Timestamp",
-                "Student Name", 
+                "Student Name",
+                "Scenario Title",
                 "Scenario Outcome",
-                "Reflection 1: Strategy Analysis",
-                "Reflection 2: Individual vs Group Actions",
-                "Reflection 3: What Would You Do Differently",
                 "Choices Made",
+                "Reflection 1",
+                "Reflection 2", 
+                "Reflection 3",
                 "Completion Status"
             ]
-            worksheet.append_row(headers)
+            sheet.append_row(headers)
             return True
             
     except Exception as e:
