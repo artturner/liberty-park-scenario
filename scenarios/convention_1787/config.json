@@ -104,6 +104,7 @@
       "title": "The Convention's Fate",
       "description": "The summer heat is oppressive, but the delegates press on. The fate of the new nation hangs in the balance.",
       "narration": "As the summer of 1787 draws to a close, your diplomatic choices throughout the convention have shaped the relationships between the states. The success or failure of this grand experiment in democracy now depends on the compromises you have made.",
+      "image": "scene_4.png",
       "type": "conditional",
       "conditions": [
         {
