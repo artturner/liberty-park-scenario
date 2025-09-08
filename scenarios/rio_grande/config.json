@@ -28,7 +28,7 @@
       "title": "The Call from Leadership",
       "description": "Your office in the Texas State Capitol. It's early morning. Maps of your district and photos are on the wall. A stack of files labeled 'Border Security' sits on your desk.",
       "image": "scene_1.png",
-      "narration": "You are State Representative Alex Morales. The Governor has called a special session to pass a new, tough immigration bill, SB-42. Your constituents are divided. Ranchers demand action on property damage, while business owners worry about losing workers. The vote is in two weeks, and the party leadership wants to know your position.\n\nChief of Staff, Maria: 'Rep. Morales, the Speaker's office is on the line. They want to know if you'll co-sponsor SB-42. It's a strong bill—it would empower all state and local police to investigate and arrest anyone they suspect of being in the country illegally. What should I tell them?'",
+      "narration": "You are State Representative Alex Morales. The Governor has called a special session to pass a new, tough immigration bill, SB-42. Your constituents are divided. Ranchers demand action on property damage, while business owners worry about losing workers. The vote is in two weeks, and the party leadership wants to know your position.\n\nChief of Staff: 'Rep. Morales, the Speaker's office is on the line. They want to know if you'll co-sponsor SB-42. It's a strong bill—it would empower all state and local police to investigate and arrest anyone they suspect of being in the country illegally. What should I tell them?'",
       "type": "choice",
       "choices": [
         {
@@ -65,9 +65,9 @@
     },
     "2b": {
       "title": "The Legal Briefing",
-      "description": "Maria hands you a legal memo. Key phrases are highlighted: 'Supremacy Clause,' 'Arizona v. U.S.,' 'Likely Injunction.'",
+      "description": "Your Chief of Staff hands you a legal memo. Key phrases are highlighted: 'Supremacy Clause,' 'Arizona v. U.S.,' 'Likely Injunction.'",
       "image": "scene_2b.png",
-      "narration": "Maria: 'Here's the brief from Legislative Council. They're flagging major legal risks, especially with the provision empowering local police. They say the courts will almost certainly strike it down, just like they did with parts of Arizona's law. But polling in our district shows 60% of voters want some kind of action.'\n\nThe legal risks are clear, but so is the political pressure. You need to decide your next move.",
+      "narration": "Chief of Staff: 'Here's the brief from Legislative Council. They're flagging major legal risks, especially with the provision empowering local police. They say the courts will almost certainly strike it down, just like they did with parts of Arizona's law. But polling in our district shows 60% of voters want some kind of action.'\n\nThe legal risks are clear, but so is the political pressure. You need to decide your next move.",
       "type": "auto_advance",
       "next": "3b"
     },
@@ -92,9 +92,9 @@
     },
     "3b": {
       "title": "A Fork in the Road",
-      "description": "Back in your office. Maria has two proposals on your desk.",
+      "description": "Back in your office. Your Chief of Staff has two proposals on your desk.",
       "image": "scene_3b.png",
-      "narration": "Maria: 'Okay, since we didn't commit, we have options. We can introduce an amendment to soften the bill—remove the arrest power for local police and add funding for more courts to process asylum cases. Or, we can draft our own, separate bill that focuses purely on more funding for state border security technology—drones, sensors—without the controversial arrest provisions.'",
+      "narration": "Chief of Staff: 'Okay, since we didn't commit, we have options. We can introduce an amendment to soften the bill—remove the arrest power for local police and add funding for more courts to process asylum cases. Or, we can draft our own, separate bill that focuses purely on more funding for state border security technology—drones, sensors—without the controversial arrest provisions.'",
       "type": "choice",
       "choices": [
         {
@@ -119,7 +119,7 @@
       "title": "Political Isolation",
       "description": "You're watching the news in your office. The screen shows the rally, but the headline reads: 'Morales Sides with Open Border Activists, Defies Governor.' Your phone buzzes with a text from the Speaker: 'You're off the Appropriations Committee.'",
       "image": "scene_3c.png",
-      "narration": "Maria: 'Well, we knew this would happen. You've been removed from your committee as punishment. The bill is still headed for a vote, and leadership is whipping hard to get it passed. Our opposition might not be enough to stop it. What's our plan for the floor vote?'\n\nYou've taken a principled stand, but it has cost you political capital and influence.",
+      "narration": "Chief of Staff: 'Well, we knew this would happen. You've been removed from your committee as punishment. The bill is still headed for a vote, and leadership is whipping hard to get it passed. Our opposition might not be enough to stop it. What's our plan for the floor vote?'\n\nYou've taken a principled stand, but it has cost you political capital and influence.",
       "type": "auto_advance",
       "next": "4",
       "effects": {
@@ -199,7 +199,7 @@
       "image": "reflection.png",
       "narration": "You've navigated the complex world of state politics and immigration policy. Now take some time to reflect on your decisions and their consequences.",
       "type": "end",
-      "outcome": "reflection",
+      "outcome": "success",
       "outcome_message": "Rio Grande Dilemma Complete",
       "reflection_prompts": [
         {
