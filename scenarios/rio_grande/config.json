@@ -199,6 +199,8 @@
       "image": "reflection.png",
       "narration": "You've navigated the complex world of state politics and immigration policy. Now take some time to reflect on your decisions and their consequences.",
       "type": "end",
+      "outcome": "reflection",
+      "outcome_message": "Rio Grande Dilemma Complete",
       "reflection_prompts": [
         {
           "prompt": "What key factors—legal, economic, ethical, or political—guided your initial decision? How did your priorities shift as you encountered new information from different stakeholders?",
