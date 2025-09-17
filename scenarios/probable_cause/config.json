@@ -80,7 +80,7 @@
       "description": "Same as Scene 4. You hand the driver a warning ticket. He quickly signs it and prepares to drive away, looking relieved.",
       "narration": "You: \"This is a warning. Try to be more careful. You're free to go.\"\n\nYou decided you didn't have enough evidence to detain him further. Later that night, you hear a BOLO (Be On the Lookout) for a similar vehicle involved in a drug trafficking operation in the next county.",
       "type": "end",
-      "outcome": "missed_opportunity",
+      "outcome": "compromise",
       "outcome_message": "Scenario Complete - Suspect Released"
     },
     "6a": {
