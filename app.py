@@ -119,43 +119,42 @@ def show_scenario_selector():
                 st.query_params.scenario = scenario['id']
                 st.rerun()
     
-    # Add information about the platform with improved styling
+    # Add information about the platform
     st.markdown("<br><br>", unsafe_allow_html=True)
 
     st.markdown("""
     <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-                padding: 2rem; border-radius: 15px; margin-top: 3rem;">
-        <h3 style="color: #333; text-align: center; margin-bottom: 1.5rem;">
-            ✨ About These Learning Scenarios
-        </h3>
-        <p style="color: #555; text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">
+                padding: 2rem; border-radius: 15px; margin-top: 3rem; text-align: center;">
+        <h3 style="color: #333; margin-bottom: 1rem;">✨ About These Learning Scenarios</h3>
+        <p style="color: #555; font-size: 1.1rem; margin-bottom: 2rem;">
             Interactive learning experiences designed to develop critical thinking through realistic decision-making
         </p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center;">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎯</div>
-                <h4 style="color: #333; margin-bottom: 0.5rem;">Interactive Choices</h4>
-                <p style="color: #666; font-size: 0.9rem;">Make decisions that shape your learning journey</p>
-            </div>
-            <div style="text-align: center;">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌟</div>
-                <h4 style="color: #333; margin-bottom: 0.5rem;">Multiple Pathways</h4>
-                <p style="color: #666; font-size: 0.9rem;">Explore different outcomes based on your choices</p>
-            </div>
-            <div style="text-align: center;">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤔</div>
-                <h4 style="color: #333; margin-bottom: 0.5rem;">Deep Reflection</h4>
-                <p style="color: #666; font-size: 0.9rem;">Thoughtful questions to enhance learning</p>
-            </div>
-            <div style="text-align: center;">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
-                <h4 style="color: #333; margin-bottom: 0.5rem;">Progress Tracking</h4>
-                <p style="color: #666; font-size: 0.9rem;">Monitor your journey and completion</p>
-            </div>
-        </div>
     </div>
     """, unsafe_allow_html=True)
+
+    # Use Streamlit columns for better compatibility
+    st.markdown("<br>", unsafe_allow_html=True)
+    col1, col2, col3, col4 = st.columns(4)
+
+    with col1:
+        st.markdown("### 🎯")
+        st.markdown("**Interactive Choices**")
+        st.markdown("Make decisions that shape your learning journey")
+
+    with col2:
+        st.markdown("### 🌟")
+        st.markdown("**Multiple Pathways**")
+        st.markdown("Explore different outcomes based on your choices")
+
+    with col3:
+        st.markdown("### 🤔")
+        st.markdown("**Deep Reflection**")
+        st.markdown("Thoughtful questions to enhance learning")
+
+    with col4:
+        st.markdown("### 📊")
+        st.markdown("**Progress Tracking**")
+        st.markdown("Monitor your journey and completion")
 
 if __name__ == "__main__":
     main()
