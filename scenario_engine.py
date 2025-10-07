@@ -141,7 +141,7 @@ class ScenarioEngine:
                     success = save_reflection_to_sheets(
                         student_name=student_name,
                         outcome=outcome,
-                        scenario_title=self.metadata.get('title', 'Unknown Scenario'),
+                        scenario=self.metadata.get('title', 'Unknown Scenario'),
                         choices_made=st.session_state.choices_made,
                         **reflections
                     )
