@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 from sheets_integration import save_reflection_to_sheets, initialize_google_sheet
+from roster_loader import load_student_roster
 
 class ScenarioEngine:
     def __init__(self, scenario_path):
@@ -115,11 +116,13 @@ class ScenarioEngine:
             st.success("✅ Reflection submitted successfully!")
             st.info(f"Thank you for completing the {self.metadata.get('title', 'scenario')} and sharing your thoughts!")
         else:
-            # Student name input
-            student_name = st.text_input(
-                "Student Name:", 
+            # Student name input with roster autocomplete
+            roster_names = load_student_roster()
+            student_name = st.selectbox(
+                "Student Name:",
+                options=[""] + roster_names,
                 key=f"student_name_{scene_id}",
-                help="Enter your name to receive completion credit"
+                help="Select your name to receive completion credit"
             )
             
             # Dynamic reflection questions

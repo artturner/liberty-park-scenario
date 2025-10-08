@@ -3,6 +3,7 @@ import json
 import os
 from sheets_integration import save_reflection_to_sheets, initialize_google_sheet
 from pathlib import Path
+from roster_loader import load_student_roster
 
 def load_scenarios():
     """Load all available scenarios from the scenarios folder and legacy data"""
@@ -139,11 +140,13 @@ def handle_choice(scene, scene_id, scenario_data, scenario_key):
                 st.success("✅ Reflection submitted successfully!")
                 st.info(f"Thank you for completing the {scenario_data['metadata']['title']} scenario and sharing your thoughts!")
             else:
-                # Student name input
-                student_name = st.text_input(
-                    "Student Name:", 
+                # Student name input with roster autocomplete
+                roster_names = load_student_roster()
+                student_name = st.selectbox(
+                    "Student Name:",
+                    options=[""] + roster_names,
                     key=f"student_name_{scenario_key}_{scene_id}",
-                    help="Enter your name to receive completion credit"
+                    help="Select your name to receive completion credit"
                 )
                 
                 # Reflection questions
