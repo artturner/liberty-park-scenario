@@ -24,7 +24,9 @@ class ScenarioEngine:
             return json.load(f)
     
     def get_image_path(self, scene_id):
-        return self.scenario_path / "images" / f"scene_{scene_id}.png"
+        # Replace dots with underscores for image filenames (e.g., "5.fragile" -> "scene_5_fragile.png")
+        image_scene_id = scene_id.replace(".", "_")
+        return self.scenario_path / "images" / f"scene_{image_scene_id}.png"
 
     def apply_effects(self, effects):
         """Apply variable effects from a choice"""
@@ -37,10 +39,13 @@ class ScenarioEngine:
     def evaluate_condition(self, condition_str):
         """Evaluate a condition string using scenario variables"""
         try:
+            # Convert JavaScript-style operators to Python
+            python_condition = condition_str.replace("&&", " and ").replace("||", " or ")
+
             # Create a safe namespace with only the scenario variables
             namespace = st.session_state.scenario_variables.copy()
             # Evaluate the condition
-            return eval(condition_str, {"__builtins__": {}}, namespace)
+            return eval(python_condition, {"__builtins__": {}}, namespace)
         except Exception as e:
             st.error(f"Error evaluating condition '{condition_str}': {str(e)}")
             return False
@@ -105,25 +110,37 @@ class ScenarioEngine:
                 st.rerun()
 
         elif scene["type"] == "conditional":
-            # Evaluate conditions and automatically advance to the matching scene
-            next_scene = None
+            # Evaluate conditions and determine next scene
+            st.markdown("---")
 
-            # Check each condition in order
-            if "conditions" in scene:
-                for condition_obj in scene["conditions"]:
-                    if self.evaluate_condition(condition_obj["condition"]):
-                        next_scene = condition_obj["next"]
-                        break
+            # Store the determined next scene in session state if not already done
+            conditional_key = f"conditional_next_{scene_id}"
+            if conditional_key not in st.session_state:
+                next_scene = None
 
-            # Use default if no condition matched
-            if next_scene is None and "default" in scene:
-                next_scene = scene["default"]
+                # Check each condition in order
+                if "conditions" in scene:
+                    for condition_obj in scene["conditions"]:
+                        if self.evaluate_condition(condition_obj["condition"]):
+                            next_scene = condition_obj["next"]
+                            break
 
-            # Advance to the next scene
+                # Use default if no condition matched
+                if next_scene is None and "default" in scene:
+                    next_scene = scene["default"]
+
+                st.session_state[conditional_key] = next_scene
+            else:
+                next_scene = st.session_state[conditional_key]
+
+            # Show a continue button to advance
             if next_scene:
-                st.session_state.scene_history.append(st.session_state.current_scene)
-                st.session_state.current_scene = next_scene
-                st.rerun()
+                if st.button("Continue", key=f"conditional_continue_{scene_id}"):
+                    # Clean up the conditional key
+                    del st.session_state[conditional_key]
+                    st.session_state.scene_history.append(st.session_state.current_scene)
+                    st.session_state.current_scene = next_scene
+                    st.rerun()
             else:
                 st.error("No valid condition matched and no default scene specified")
 
