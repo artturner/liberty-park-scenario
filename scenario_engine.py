@@ -13,6 +13,7 @@ class ScenarioEngine:
         self.scenes = self.config.get("scenes", {})
         self.reflection_questions = self.config.get("reflection_questions", [])
         self.reflection_prompts = self.config.get("reflection_prompts", [])
+        self.variables = self.config.get("variables", {})
     
     def load_config(self):
         config_file = self.scenario_path / "config.json"
@@ -24,7 +25,26 @@ class ScenarioEngine:
     
     def get_image_path(self, scene_id):
         return self.scenario_path / "images" / f"scene_{scene_id}.png"
-    
+
+    def apply_effects(self, effects):
+        """Apply variable effects from a choice"""
+        if not effects:
+            return
+        for var_name, change in effects.items():
+            if var_name in st.session_state.scenario_variables:
+                st.session_state.scenario_variables[var_name] += change
+
+    def evaluate_condition(self, condition_str):
+        """Evaluate a condition string using scenario variables"""
+        try:
+            # Create a safe namespace with only the scenario variables
+            namespace = st.session_state.scenario_variables.copy()
+            # Evaluate the condition
+            return eval(condition_str, {"__builtins__": {}}, namespace)
+        except Exception as e:
+            st.error(f"Error evaluating condition '{condition_str}': {str(e)}")
+            return False
+
     def initialize_session_state(self):
         if 'current_scene' not in st.session_state:
             st.session_state.current_scene = "1"
@@ -32,6 +52,8 @@ class ScenarioEngine:
             st.session_state.scene_history = []
         if 'choices_made' not in st.session_state:
             st.session_state.choices_made = []
+        if 'scenario_variables' not in st.session_state:
+            st.session_state.scenario_variables = self.variables.copy()
     
     def display_scene(self, scene_id):
         if scene_id not in self.scenes:
@@ -62,6 +84,10 @@ class ScenarioEngine:
             
             for i, choice in enumerate(scene["choices"]):
                 if st.button(f"{chr(65+i)}. {choice['text']}", key=f"choice_{scene_id}_{i}"):
+                    # Apply any effects from this choice
+                    if "effects" in choice:
+                        self.apply_effects(choice["effects"])
+
                     st.session_state.choices_made.append({
                         "scene": scene_id,
                         "choice": choice["text"],
@@ -77,7 +103,30 @@ class ScenarioEngine:
                 st.session_state.scene_history.append(st.session_state.current_scene)
                 st.session_state.current_scene = scene["next"]
                 st.rerun()
-        
+
+        elif scene["type"] == "conditional":
+            # Evaluate conditions and automatically advance to the matching scene
+            next_scene = None
+
+            # Check each condition in order
+            if "conditions" in scene:
+                for condition_obj in scene["conditions"]:
+                    if self.evaluate_condition(condition_obj["condition"]):
+                        next_scene = condition_obj["next"]
+                        break
+
+            # Use default if no condition matched
+            if next_scene is None and "default" in scene:
+                next_scene = scene["default"]
+
+            # Advance to the next scene
+            if next_scene:
+                st.session_state.scene_history.append(st.session_state.current_scene)
+                st.session_state.current_scene = next_scene
+                st.rerun()
+            else:
+                st.error("No valid condition matched and no default scene specified")
+
         elif scene["type"] == "end":
             self.handle_end_scene(scene, scene_id)
     
