@@ -1,0 +1,60 @@
+IMAGE REQUIREMENTS for Party Realignment Scenario
+===================================================
+
+The following images need to be created and placed in this folder:
+
+1. scene_1.png
+   - Description: A 1960s-era congressional office with a rotary phone on a desk
+   - Mood: Tense
+   - Key elements: Desk, rotary phone, 1960s decor
+
+2. scene_2.png
+   - Description: County Party Chairman holding a newspaper with headline "WILL HE BETRAY US?"
+   - Mood: Confrontational, angry
+   - Key elements: Furious local politician, newspaper with visible headline
+
+3. scene_3.png
+   - Description: The floor of the U.S. House of Representatives during a vote
+   - Mood: Dramatic, tense
+   - Key elements: Chamber filled with representatives, electronic voting board lighting up
+
+4. scene_4a.png
+   - Description: President LBJ signing the Civil Rights Act
+   - Mood: Historic but uncomfortable for the player
+   - Key elements: Presidential signing ceremony, player visible in background looking uncomfortable
+
+5. scene_5a.png
+   - Description: "DEFEATED" election night banner from 1966 primary
+   - Mood: Failure, loss
+   - Key elements: Election night defeat banner, possibly with modern electoral map in background showing Republican South
+
+6. scene_4b.png
+   - Description: Local newspaper with headline "OUR CONGRESSMAN VOTES 'NAY'! HONORS STATES' RIGHTS."
+   - Mood: Triumphant (locally) but ominous
+   - Key elements: Newspaper headline, Southern local paper aesthetic
+
+7. scene_5b.png
+   - Description: A crossroads with political party signs
+   - Mood: Decision point, uncertain future
+   - Key elements: Democratic donkey sign, Republican elephant sign, small third-party sign
+
+8. scene_6b_stay.png
+   - Description: Congressional desk in poor location, isolated congressman
+   - Mood: Isolation, powerlessness
+   - Key elements: Desk in back corner, empty chairs nearby, modern electoral map showing Republican South
+
+9. scene_6b_switch.png
+   - Description: "RE-ELECTED" banner with Republican elephant, handshaking with new colleagues
+   - Mood: Success, new beginning
+   - Key elements: Republican victory banner, politicians shaking hands, modern electoral map showing Republican South
+
+10. scene_6b_third.png
+    - Description: Sparsely attended "States' Rights Party" rally
+    - Mood: Futility, failure
+    - Key elements: Small crowd, third-party campaign signs, modern electoral map showing Republican South
+
+NOTES:
+- All "end" scenes (5a, 6b_stay, 6b_switch, 6b_third) should include a modern U.S. electoral map showing the heavily Republican South and Democratic Northeast as a visual reminder of the long-term realignment
+- Images should evoke 1960s aesthetic for scenes 1-5b
+- Consider using historical photographs or historically-accurate illustrations
+- The modern electoral maps in end scenes provide visual closure showing the result of the realignment
