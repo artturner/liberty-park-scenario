@@ -38,3 +38,9 @@ Thumbs.db
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Google credentials
+google_credentials.json
+
+# Generated grade files
+grade_outputs/
