@@ -64,22 +64,27 @@ class ScenarioEngine:
         if scene_id not in self.scenes:
             st.error(f"Scene '{scene_id}' not found in scenario configuration")
             return None
-            
+
         scene = self.scenes[scene_id]
-        
+
         # Display title
         st.title(scene["title"])
-        
+
         # Display image if available, otherwise fall back to text description
-        image_path = self.get_image_path(scene_id)
+        # First try to get image filename from scene config, then fall back to constructed path
+        if scene.get("image"):
+            image_path = self.scenario_path / "images" / scene["image"]
+        else:
+            image_path = self.get_image_path(scene_id)
+
         if image_path.exists():
             st.image(str(image_path), use_container_width=True)
         elif scene.get("description"):
             st.info(scene["description"])
-        
+
         # Display narration
         st.markdown(scene.get('narration', ''))
-        
+
         return scene
     
     def handle_choice(self, scene, scene_id):
