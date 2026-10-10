@@ -78,7 +78,7 @@ def get_google_sheets_client():
         return None
 
 
-def load_roster(roster_file="fall25roster.csv"):
+def load_roster(roster_file="spring26roster.csv"):
     """Load student roster and create lookup dictionaries."""
     roster = {}
     roster_by_lastname_firstname = {}

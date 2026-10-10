@@ -44,3 +44,11 @@ google_credentials.json
 
 # Generated grade files
 grade_outputs/
+# Local only: chat transcripts / student data / textbook-derived content
+fall25roster.csv
+test_grade_outputs/
+2026-02-07-how-do-i-determine-if-this-folder-is-in-sync-with.txt
+generate_grades.txt
+probable-cause.txt
+realignment.txt
+rosterlookup.txt
